@@ -1,5 +1,25 @@
 
+//counter variables
+let n = 0; 
+let win = 0;
+let draw = 0;
+let lose = 0; 
+
+//Start of RPS function
 function rockPaperScissors() {
+
+  //Iteration counter
+if (n >= 10) {
+  alert("You've played 10 rounds! Here's how you did:\nWins: " + win +
+  "\nLosses: " + lose +
+  "\nDraws: " + draw); 
+  win = 0;
+  draw = 0;
+  lose = 0;  
+  n = 0;
+} else {};
+n += 1; 
+
   //player chooses symbol
   let userSymbol; 
   function userSymbolFunction() {
@@ -20,12 +40,15 @@ switch (computerNumber) {
     switch (userSymbol) {
         case "R": //player choices
           alert("Draw. Computer chose Rock" );
+          draw += 1; 
           break; 
         case "P": 
           alert("You Win! Computer chose Rock");
+          win += 1; 
           break; 
           case "S": 
           alert("Sorry, You Lose. Computer chose Rock");
+          lose += 1; 
           break; 
           default:
             alert("Something went wrong, sorry about that"); 
@@ -44,12 +67,15 @@ switch (computerNumber) {
     switch (userSymbol) {
         case "R":  //player choices
           alert("Sorry, You Lose. Computer chose paper" );
+          lose += 1;
           break; 
         case "P": 
           alert("Draw. Computer chose paper");
+          draw += 1; 
           break; 
           case "S": 
           alert("You win! Computer chose paper");
+          win += 1;
           break; 
           default:
             alert("Something went wrong, sorry about that"); 
@@ -62,12 +88,15 @@ switch (computerNumber) {
     switch (userSymbol) {
         case "R":  //player choices
           alert("You Win! Computer chose scissors" );
+          win += 1;
           break; 
         case "P": 
           alert("Sorry, You Lose. Computer chose scissors");
+          lose += 1;
           break; 
           case "S": 
           alert("Draw. Computer chose scissors");
+          draw += 1; 
           break; 
           default:
             alert("Something went wrong, sorry about that"); 
@@ -78,7 +107,8 @@ switch (computerNumber) {
 
     default: //If computer doesn't produce 0, 1, or 2
       alert("Something went wrong on our end, sorry about that"); 
+} 
 }
-}
+
 
 rockPaperScissors(); 
