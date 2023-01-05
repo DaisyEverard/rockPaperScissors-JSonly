@@ -1,11 +1,19 @@
 
 function rockPaperScissors() {
   //player chooses symbol
-let userSymbol = prompt("Let's play rock, paper, scissors! Please enter either 'R', 'P', or 'S'");
+  let userSymbol; 
+  function userSymbolFunction() {
+userSymbol = prompt("Let's play rock, paper, scissors! Please enter either 'R', 'P', or 'S'");
+ // check if valid input was entered
+ if (userSymbol !== "R" && userSymbol !== "P" && userSymbol !== "S") {
+  alert("Invalid input, please try again (You must use capital letters)");
+  userSymbolFunction(); 
+}
+  } 
+  userSymbolFunction(); 
 
 //computer generated number. "chooses symbol"
 let computerNumber = Math.floor(Math.random() * 3); 
-console.log(computerNumber);
 
 switch (computerNumber) {
     case 0: //computer chooses rock
@@ -20,16 +28,17 @@ switch (computerNumber) {
           alert("Sorry, You Lose. Computer chose Rock");
           break; 
           default:
-            alert("Invalid input"); 
+            alert("Something went wrong, sorry about that"); 
             break; 
     }
-      playAgain = confirm("Play Again?"); 
-        if (playAgain) {
-          rockPaperScissors(); 
-        } else {
-          break; 
-        }
-        break; 
+     //Defining playAgain before first use
+    function playAgain() {
+      if (confirm("Play Again?")) {
+        rockPaperScissors();
+      } else {}
+    }
+    playAgain(); // playAgain first call
+    break; 
     
     case 1: //computer chooses paper
     switch (userSymbol) {
@@ -43,16 +52,11 @@ switch (computerNumber) {
           alert("You win! Computer chose paper");
           break; 
           default:
-            alert("Invalid input"); 
+            alert("Something went wrong, sorry about that"); 
             break;
-    }
-    playAgain = confirm("Play Again?"); 
-    if (playAgain) {
-      rockPaperScissors(); 
-    } else {
-      break; 
-    }
-    break;  
+    } 
+    playAgain(); 
+    break;
 
     case 2:  //computer chooses scissors
     switch (userSymbol) {
@@ -66,18 +70,13 @@ switch (computerNumber) {
           alert("Draw. Computer chose scissors");
           break; 
           default:
-            alert("Invalid input"); 
+            alert("Something went wrong, sorry about that"); 
             break;
     }
-    playAgain = confirm("Play Again?"); 
-    if (playAgain) {
-      rockPaperScissors(); 
-    } else {
-      break; 
-    }
-    break; 
+    playAgain(); 
+    break;
 
-    default:
+    default: //If computer doesn't produce 0, 1, or 2
       alert("Something went wrong on our end, sorry about that"); 
 }
 }
