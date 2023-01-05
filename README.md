@@ -3,6 +3,8 @@ a game of rockPaperScissors using JS alerts and logic. No visuals
 
 ## link to site
 
+https://daisyeverard.github.io/rockPaperScissors-JSonly/
+
 ## How it works
 This is a game of rock, paper, scissors. The rules are that players choose one of 
 3 symbols independently. Rock beats scissors, scissors beat paper, and paper beats rock. 
