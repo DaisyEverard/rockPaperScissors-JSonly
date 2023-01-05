@@ -19,6 +19,9 @@ switch (computerNumber) {
           case "S": 
           alert("Sorry, You Lose. Computer chose Rock");
           break; 
+          default:
+            alert("Invalid input"); 
+            break; 
     }
       playAgain = confirm("Play Again?"); 
         if (playAgain) {
@@ -39,6 +42,9 @@ switch (computerNumber) {
           case "S": 
           alert("You win! Computer chose paper");
           break; 
+          default:
+            alert("Invalid input"); 
+            break;
     }
     playAgain = confirm("Play Again?"); 
     if (playAgain) {
@@ -59,6 +65,9 @@ switch (computerNumber) {
           case "S": 
           alert("Draw. Computer chose scissors");
           break; 
+          default:
+            alert("Invalid input"); 
+            break;
     }
     playAgain = confirm("Play Again?"); 
     if (playAgain) {
@@ -67,6 +76,9 @@ switch (computerNumber) {
       break; 
     }
     break; 
+
+    default:
+      alert("Something went wrong on our end, sorry about that"); 
 }
 }
 
