@@ -1,9 +1,17 @@
 # rockPaperScissors-JSonly
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 a game of rockPaperScissors using JS alerts and logic. No visuals
 
 ## link to site
 
 https://daisyeverard.github.io/rockPaperScissors-JSonly/
+
+- [How It Works](#how-it-works)
+- [Technologies](#technologies)
+- [Issues and Solutions](#issues-and-solutions)
+- [Future Development](#future-development-options)
+- [Contacts](#contacts)
 
 ## How it works
 This is a game of rock, paper, scissors. The rules are that players choose one of 
@@ -19,7 +27,12 @@ This is a game of rock, paper, scissors. The rules are that players choose one o
 - If player clicks OK the function calls `rockPaperScissors` again.
 - If the player clicks cancel, the function ends and there's a `break`
 
-## Issues and solutions
+## Technologies
+
+- HTML
+- JavaScript
+
+## Issues and Solutions
 
 1. Function not running
 - forgot to put empty parentheses () when calling function. 
@@ -44,6 +57,17 @@ Invalid input was instead determined after line 4 with an if statement in improv
 
 5. Code not stopping after cancel clicked on 'Play again?' prompt.
 the playAgain if statement needed to have an else clause even if it's blank. 
+
+## Future Development Options
+
+- Add a UI where users can click an image of the option they want
+- display results on page, rather than in alerts
+
+## Contacts
+
+- GitHub: [DaisyEverard](https://github.com/DaisyEverard)
+- LinkedIn: [daisy-everard](https://www.linkedin.com/in/daisy-everard/)
+- Email: msdeverard@gmail.com
 
 ## License
 
